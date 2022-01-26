@@ -1,4 +1,4 @@
-FROM jupyter/datascience-notebook
+FROM jupyter/datascience-notebook:python-3.9.5
 
 ARG CONDA_ENV=/opt/conda
 ARG HOME_DIR=/home/jovyan
@@ -18,5 +18,9 @@ USER $NB_USER
 RUN conda install --yes --prefix $CONDA_ENV -c conda-forge \
         ipython \
         ipywidgets
+
+RUN conda install pip
+
+RUN /opt/conda/bin/pip3 install python-otter otter-grader
 
 ENTRYPOINT start-jupyter-edu.sh 

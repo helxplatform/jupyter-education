@@ -19,11 +19,11 @@ function make_soft_link() {
 }
 
 if [ -d "$USER_PATH" ]; then
-    COMP116_PATH=${USER_PATH}/comp116
+    COMP116_PATH=${USER_PATH}/COMP116
     move $COMP116_PATH
     make_soft_link
 else
-    COMP116_PATH=${HOME_PATH}/comp116
+    COMP116_PATH=${HOME_PATH}/COMP116
     move $COMP116_PATH
 fi
 
