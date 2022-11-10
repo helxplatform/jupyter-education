@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "jupyter-education"
+version = "0.1.0"
+description = "Jupyter datascience notebook for COMP116"
+authors = ["Your Name <you@example.com>"]
+readme = "README.md"
+packages = [{include = "jupyter_education"}]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+matplotlib = "^3.6.2"
+nbformat = "^5.7.0"
+pandas = "^1.5.1"
+numpy = "^1.23.4"
+jupyter = "^1.0.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

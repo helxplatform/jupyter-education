@@ -9,8 +9,8 @@ function move() {
     echo ${WORK_PATH}
     mkdir ${WORK_PATH}
     cd ${WORK_PATH}
-    mv "${HOME_PATH}/Fetcher.ipynb" .
-    mv "${HOME_PATH}/comp116.py" .
+    mv "${HOME_PATH}/src/Fetcher.ipynb" .
+    mv "${HOME_PATH}/src/comp116.py" .
 }
 
 # Create a soft link
