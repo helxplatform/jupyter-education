@@ -4,7 +4,7 @@ version = "0.1.0"
 description = "Jupyter datascience notebook for COMP116"
 authors = ["Your Name <you@example.com>"]
 readme = "README.md"
-packages = [{include = "jupyter_education"}]
+packages = [{include = "src"}]
 
 [tool.poetry.dependencies]
 python = "^3.9"
