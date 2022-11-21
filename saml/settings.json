@@ -1,0 +1,39 @@
+{
+    "strict": true,
+    "debug": true,
+    "sp": {
+        "entityId": "https://jupyter-education-dev.apps.renci.org/metadata/",
+        "assertionConsumerService": {
+            "url": "https://jupyter-education-dev.apps.renci.org/?acs",
+            "binding": "urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST"
+        },
+        "singleLogoutService": {
+            "url": "https://jupyter-education-dev.apps.renci.org/?sls",
+            "binding": "urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect"
+        },
+        "attributeConsumingService": {
+                "serviceName": "SP test",
+                "serviceDescription": "Test Service",
+                "requestedAttributes": [
+                    {
+                        "name": "",
+                        "isRequired": false
+                    }
+                ]
+        },
+        "NameIDFormat": "urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified"
+    },
+    "idp": {
+        "entityId": "https://app.onelogin.com/saml/metadata/<onelogin_connector_id>",
+        "singleSignOnService": {
+            "url": "https://app.onelogin.com/trust/saml2/http-post/sso/<onelogin_connector_id>",
+            "binding": "urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect"
+        },
+        "singleLogoutService": {
+            "url": "https://app.onelogin.com/trust/saml2/http-redirect/slo/<onelogin_connector_id>",
+            "responseUrl": "https://app.onelogin.com/trust/saml2/http-redirect/slo_return/<onelogin_connector_id>",
+            "binding": "urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect"
+        },
+        "x509cert": "<shibboleth_cert>"
+    }
+}
