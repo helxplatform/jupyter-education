@@ -2,6 +2,7 @@ FROM jupyter/datascience-notebook:python-3.9.5
 
 ARG CONDA_ENV=/opt/conda
 ARG HOME_DIR=/home/jovyan
+ARG USER_NAME=tcheek
 
 USER root
 
@@ -22,9 +23,5 @@ COPY start-jupyter-edu.sh /usr/local/bin
 RUN $HOME_DIR/.local/bin/poetry install --no-interaction --no-ansi --no-root
 
 USER $NB_USER
-
-RUN conda install --yes --prefix $CONDA_ENV -c conda-forge \
-        ipython \
-        ipywidgets
 
 ENTRYPOINT start-jupyter-edu.sh 
