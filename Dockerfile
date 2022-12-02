@@ -20,8 +20,6 @@ RUN conda install --yes --prefix $CONDA_ENV -c conda-forge \
         ipython \
         ipywidgets
 
-RUN conda install pip
-
-RUN /opt/conda/bin/pip3 install python-otter otter-grader python3-saml
+RUN pip3 install python-otter otter-grader python3-saml
 
 ENTRYPOINT start-jupyter-edu.sh 
