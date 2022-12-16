@@ -1,4 +1,4 @@
-FROM jupyter/datascience-notebook:python-3.9.5
+FROM helxplatform/jupyter-datascience:sterling-ez 
 
 ARG CONDA_ENV=/opt/conda
 ARG HOME_DIR=/home/jovyan
@@ -13,8 +13,6 @@ COPY Fetcher.ipynb $HOME_DIR
 
 COPY start-jupyter-edu.sh /usr/local/bin
 
-USER $NB_USER
-
 RUN conda install --yes --prefix $CONDA_ENV -c conda-forge \
         ipython \
         ipywidgets
@@ -22,5 +20,7 @@ RUN conda install --yes --prefix $CONDA_ENV -c conda-forge \
 RUN conda install pip
 
 RUN /opt/conda/bin/pip3 install python-otter otter-grader
+
+USER $NB_USER
 
 ENTRYPOINT start-jupyter-edu.sh 
