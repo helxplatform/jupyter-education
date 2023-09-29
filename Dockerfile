@@ -1,4 +1,4 @@
-FROM helxplatform/jupyter-datascience:sterling-ez 
+FROM helxplatform/jupyter/datascience-notebook:v0.0.5
 
 ARG CONDA_ENV=/opt/conda
 ARG HOME_DIR=/home/jovyan
